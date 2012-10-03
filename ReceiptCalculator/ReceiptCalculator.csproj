@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FinalTotals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalTotals.Designer.cs">
+      <DependentUpon>FinalTotals.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface.cs" />
     <Compile Include="List.cs" />
     <Compile Include="NewReceipt.cs" />
@@ -62,6 +68,9 @@
     <Compile Include="Receipt.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FinalTotals.resx">
+      <DependentUpon>FinalTotals.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RCForm.resx">
       <DependentUpon>RCForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,30 +29,32 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.aTotal = new System.Windows.Forms.TextBox();
-            this.vTotal = new System.Windows.Forms.TextBox();
             this.updateCurrentReceipt = new System.Windows.Forms.Button();
-            this.removeCurrentReceipt = new System.Windows.Forms.Button();
             this.calcFinalTotals = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.mTotal = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.summaryTitle = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.additAmountOwed1 = new System.Windows.Forms.Label();
+            this.additAmountOwed2 = new System.Windows.Forms.Label();
             this.aCommunalTotal = new System.Windows.Forms.Label();
             this.aCommunalTotalPerPerson = new System.Windows.Forms.Label();
-            this.vOwesA = new System.Windows.Forms.Label();
-            this.mOwesA = new System.Windows.Forms.Label();
+            this.additAmountOwedTotal1 = new System.Windows.Forms.Label();
+            this.additAmountOwedTotal2 = new System.Windows.Forms.Label();
             this.communalTotal = new System.Windows.Forms.NumericUpDown();
+            this.aTotal = new System.Windows.Forms.NumericUpDown();
+            this.vTotal = new System.Windows.Forms.NumericUpDown();
+            this.mTotal = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.communalTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTotal)).BeginInit();
             this.SuspendLayout();
             // 
             // currentListOwner
@@ -118,27 +120,11 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Additional Amount Owed By Vince:";
             // 
-            // aTotal
-            // 
-            this.aTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aTotal.Location = new System.Drawing.Point(284, 107);
-            this.aTotal.Name = "aTotal";
-            this.aTotal.Size = new System.Drawing.Size(100, 22);
-            this.aTotal.TabIndex = 9;
-            // 
-            // vTotal
-            // 
-            this.vTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vTotal.Location = new System.Drawing.Point(284, 133);
-            this.vTotal.Name = "vTotal";
-            this.vTotal.Size = new System.Drawing.Size(100, 22);
-            this.vTotal.TabIndex = 10;
-            // 
             // updateCurrentReceipt
             // 
             this.updateCurrentReceipt.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.updateCurrentReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateCurrentReceipt.Location = new System.Drawing.Point(12, 205);
+            this.updateCurrentReceipt.Location = new System.Drawing.Point(12, 201);
             this.updateCurrentReceipt.Name = "updateCurrentReceipt";
             this.updateCurrentReceipt.Size = new System.Drawing.Size(204, 31);
             this.updateCurrentReceipt.TabIndex = 11;
@@ -146,22 +132,11 @@
             this.updateCurrentReceipt.UseVisualStyleBackColor = false;
             this.updateCurrentReceipt.Click += new System.EventHandler(this.updateCurrentReceipt_Click);
             // 
-            // removeCurrentReceipt
-            // 
-            this.removeCurrentReceipt.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.removeCurrentReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeCurrentReceipt.Location = new System.Drawing.Point(230, 205);
-            this.removeCurrentReceipt.Name = "removeCurrentReceipt";
-            this.removeCurrentReceipt.Size = new System.Drawing.Size(200, 31);
-            this.removeCurrentReceipt.TabIndex = 13;
-            this.removeCurrentReceipt.Text = "Remove Current Receipt";
-            this.removeCurrentReceipt.UseVisualStyleBackColor = false;
-            // 
             // calcFinalTotals
             // 
             this.calcFinalTotals.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.calcFinalTotals.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calcFinalTotals.Location = new System.Drawing.Point(133, 242);
+            this.calcFinalTotals.Location = new System.Drawing.Point(452, 165);
             this.calcFinalTotals.Name = "calcFinalTotals";
             this.calcFinalTotals.Size = new System.Drawing.Size(175, 31);
             this.calcFinalTotals.TabIndex = 14;
@@ -209,14 +184,6 @@
             this.label9.Size = new System.Drawing.Size(18, 20);
             this.label9.TabIndex = 20;
             this.label9.Text = "$";
-            // 
-            // mTotal
-            // 
-            this.mTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mTotal.Location = new System.Drawing.Point(284, 159);
-            this.mTotal.Name = "mTotal";
-            this.mTotal.Size = new System.Drawing.Size(100, 22);
-            this.mTotal.TabIndex = 19;
             // 
             // label10
             // 
@@ -278,25 +245,25 @@
             this.label15.TabIndex = 26;
             this.label15.Text = "Communal Total Owed Per Person:";
             // 
-            // label16
+            // additAmountOwed1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(449, 103);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(255, 16);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "Addit. Total Amount Owed By Vince:";
+            this.additAmountOwed1.AutoSize = true;
+            this.additAmountOwed1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.additAmountOwed1.Location = new System.Drawing.Point(449, 103);
+            this.additAmountOwed1.Name = "additAmountOwed1";
+            this.additAmountOwed1.Size = new System.Drawing.Size(255, 16);
+            this.additAmountOwed1.TabIndex = 27;
+            this.additAmountOwed1.Text = "Addit. Total Amount Owed By Vince:";
             // 
-            // label17
+            // additAmountOwed2
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(449, 129);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(249, 16);
-            this.label17.TabIndex = 28;
-            this.label17.Text = "Addit. Total Amount Owed By Mike:";
+            this.additAmountOwed2.AutoSize = true;
+            this.additAmountOwed2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.additAmountOwed2.Location = new System.Drawing.Point(449, 129);
+            this.additAmountOwed2.Name = "additAmountOwed2";
+            this.additAmountOwed2.Size = new System.Drawing.Size(249, 16);
+            this.additAmountOwed2.TabIndex = 28;
+            this.additAmountOwed2.Text = "Addit. Total Amount Owed By Mike:";
             // 
             // aCommunalTotal
             // 
@@ -318,25 +285,25 @@
             this.aCommunalTotalPerPerson.TabIndex = 30;
             this.aCommunalTotalPerPerson.Text = "$0.00";
             // 
-            // vOwesA
+            // additAmountOwedTotal1
             // 
-            this.vOwesA.AutoSize = true;
-            this.vOwesA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vOwesA.Location = new System.Drawing.Point(717, 103);
-            this.vOwesA.Name = "vOwesA";
-            this.vOwesA.Size = new System.Drawing.Size(39, 16);
-            this.vOwesA.TabIndex = 31;
-            this.vOwesA.Text = "$0.00";
+            this.additAmountOwedTotal1.AutoSize = true;
+            this.additAmountOwedTotal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.additAmountOwedTotal1.Location = new System.Drawing.Point(717, 103);
+            this.additAmountOwedTotal1.Name = "additAmountOwedTotal1";
+            this.additAmountOwedTotal1.Size = new System.Drawing.Size(39, 16);
+            this.additAmountOwedTotal1.TabIndex = 31;
+            this.additAmountOwedTotal1.Text = "$0.00";
             // 
-            // mOwesA
+            // additAmountOwedTotal2
             // 
-            this.mOwesA.AutoSize = true;
-            this.mOwesA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mOwesA.Location = new System.Drawing.Point(717, 129);
-            this.mOwesA.Name = "mOwesA";
-            this.mOwesA.Size = new System.Drawing.Size(39, 16);
-            this.mOwesA.TabIndex = 32;
-            this.mOwesA.Text = "$0.00";
+            this.additAmountOwedTotal2.AutoSize = true;
+            this.additAmountOwedTotal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.additAmountOwedTotal2.Location = new System.Drawing.Point(717, 129);
+            this.additAmountOwedTotal2.Name = "additAmountOwedTotal2";
+            this.additAmountOwedTotal2.Size = new System.Drawing.Size(39, 16);
+            this.additAmountOwedTotal2.TabIndex = 32;
+            this.additAmountOwedTotal2.Text = "$0.00";
             // 
             // communalTotal
             // 
@@ -351,34 +318,72 @@
             this.communalTotal.Size = new System.Drawing.Size(100, 20);
             this.communalTotal.TabIndex = 33;
             // 
+            // aTotal
+            // 
+            this.aTotal.DecimalPlaces = 2;
+            this.aTotal.Location = new System.Drawing.Point(284, 107);
+            this.aTotal.Maximum = new decimal(new int[] {
+            1661992959,
+            1808227885,
+            5,
+            0});
+            this.aTotal.Name = "aTotal";
+            this.aTotal.Size = new System.Drawing.Size(100, 20);
+            this.aTotal.TabIndex = 34;
+            // 
+            // vTotal
+            // 
+            this.vTotal.DecimalPlaces = 2;
+            this.vTotal.Location = new System.Drawing.Point(284, 132);
+            this.vTotal.Maximum = new decimal(new int[] {
+            1661992959,
+            1808227885,
+            5,
+            0});
+            this.vTotal.Name = "vTotal";
+            this.vTotal.Size = new System.Drawing.Size(100, 20);
+            this.vTotal.TabIndex = 35;
+            // 
+            // mTotal
+            // 
+            this.mTotal.DecimalPlaces = 2;
+            this.mTotal.Location = new System.Drawing.Point(284, 159);
+            this.mTotal.Maximum = new decimal(new int[] {
+            1661992959,
+            1808227885,
+            5,
+            0});
+            this.mTotal.Name = "mTotal";
+            this.mTotal.Size = new System.Drawing.Size(100, 20);
+            this.mTotal.TabIndex = 36;
+            // 
             // RCForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 297);
+            this.Controls.Add(this.mTotal);
+            this.Controls.Add(this.vTotal);
+            this.Controls.Add(this.aTotal);
             this.Controls.Add(this.communalTotal);
-            this.Controls.Add(this.mOwesA);
-            this.Controls.Add(this.vOwesA);
+            this.Controls.Add(this.additAmountOwedTotal2);
+            this.Controls.Add(this.additAmountOwedTotal1);
             this.Controls.Add(this.aCommunalTotalPerPerson);
             this.Controls.Add(this.aCommunalTotal);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.additAmountOwed2);
+            this.Controls.Add(this.additAmountOwed1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.summaryTitle);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.mTotal);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.calcFinalTotals);
-            this.Controls.Add(this.removeCurrentReceipt);
             this.Controls.Add(this.updateCurrentReceipt);
-            this.Controls.Add(this.vTotal);
-            this.Controls.Add(this.aTotal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -390,6 +395,9 @@
             this.Name = "RCForm";
             this.Text = "RCForm";
             ((System.ComponentModel.ISupportInitialize)(this.communalTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTotal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,28 +411,27 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox aTotal;
-        private System.Windows.Forms.TextBox vTotal;
         private System.Windows.Forms.Button updateCurrentReceipt;
-        private System.Windows.Forms.Button removeCurrentReceipt;
         private System.Windows.Forms.Button calcFinalTotals;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox mTotal;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label summaryTitle;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label additAmountOwed1;
+        private System.Windows.Forms.Label additAmountOwed2;
         private System.Windows.Forms.Label aCommunalTotal;
         private System.Windows.Forms.Label aCommunalTotalPerPerson;
-        private System.Windows.Forms.Label vOwesA;
-        private System.Windows.Forms.Label mOwesA;
+        private System.Windows.Forms.Label additAmountOwedTotal1;
+        private System.Windows.Forms.Label additAmountOwedTotal2;
         private System.Windows.Forms.NumericUpDown communalTotal;
+        private System.Windows.Forms.NumericUpDown aTotal;
+        private System.Windows.Forms.NumericUpDown vTotal;
+        private System.Windows.Forms.NumericUpDown mTotal;
     }
 }

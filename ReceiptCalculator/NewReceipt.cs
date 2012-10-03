@@ -70,9 +70,9 @@ namespace ReceiptCalculator.NicksAdditionalSource {
         /// </summary>
         public decimal VTotal { get; set; }
         /// <summary>
-        /// Property to get or set Rizzo's total for this receipt
+        /// Property to get or set Mike's total for this receipt
         /// </summary>
-        public decimal RTotal { get; set; }
+        public decimal MTotal { get; set; }
 
         #endregion /* Properties */
 
@@ -116,10 +116,10 @@ namespace ReceiptCalculator.NicksAdditionalSource {
         /// </summary>
         public decimal VTotal { get { return receipts.Sum<NewReceipt>(r => r.VTotal); } }
         /// <summary>
-        /// RTotal property to calculate the proper Rizzo's total sum using the Sum extension of
+        /// RTotal property to calculate the proper Mike's total sum using the Sum extension of
         /// IEnumerable on the internal receipt list.
         /// </summary>
-        public decimal RTotal { get { return receipts.Sum<NewReceipt>(r => r.RTotal); } }
+        public decimal MTotal { get { return receipts.Sum<NewReceipt>(r => r.MTotal); } }
 
         /// <summary>
         /// Return the number of receipts in this receipt list instance

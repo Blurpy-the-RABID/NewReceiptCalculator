@@ -19,7 +19,15 @@ namespace ReceiptCalculator {
         public List() {
         }
 
+        public List(string owner) {
+            listOwner = owner;
+        }
+
         public void calculateTotals() {
+            listCommunalTotal = 0.00;
+            aListTotal = 0.00;
+            vListTotal = 0.00;
+            mListTotal = 0.00;
             foreach (Receipt receipt in receiptList) {
                 listCommunalTotal += receipt.returnCommunalTotal();
                 aListTotal += receipt.returnATotal();
