@@ -151,7 +151,14 @@ namespace ReceiptCalculator {
         }
 
         private void calcFinalTotals_Click(object sender, EventArgs e) {
-            // Insert code for pop-up box with calculated totals HERE.
+            FinalTotals popup = new FinalTotals();
+            popup.calcFinalTotals(listOwnerArray[0], listOwnerArray[1], listOwnerArray[2]);
+            foreach (List list in listOwnerArray) {
+                popup.outputReceipts(list);
+                popup.outputListTotals(list);
+            }
+            popup.outputFinalTotals();
+            popup.ShowDialog();
         }
     }
 

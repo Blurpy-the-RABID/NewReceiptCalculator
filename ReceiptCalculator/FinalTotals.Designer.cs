@@ -100,7 +100,6 @@
             this.finalTotalsTitle.Size = new System.Drawing.Size(117, 16);
             this.finalTotalsTitle.TabIndex = 33;
             this.finalTotalsTitle.Text = "FINAL TOTALS:";
-            this.finalTotalsTitle.Click += new System.EventHandler(this.finalTotalsTitle_Click);
             // 
             // vOwesM
             // 
@@ -111,7 +110,6 @@
             this.vOwesM.Size = new System.Drawing.Size(39, 16);
             this.vOwesM.TabIndex = 44;
             this.vOwesM.Text = "$0.00";
-            this.vOwesM.Click += new System.EventHandler(this.label1_Click);
             // 
             // vOwesA
             // 
@@ -122,7 +120,6 @@
             this.vOwesA.Size = new System.Drawing.Size(39, 16);
             this.vOwesA.TabIndex = 43;
             this.vOwesA.Text = "$0.00";
-            this.vOwesA.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -133,7 +130,6 @@
             this.label3.Size = new System.Drawing.Size(130, 16);
             this.label3.TabIndex = 42;
             this.label3.Text = "Vince Owes Mike:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -144,7 +140,6 @@
             this.label4.Size = new System.Drawing.Size(132, 16);
             this.label4.TabIndex = 41;
             this.label4.Text = "Vince Owes Andy:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // mOwesV
             // 
@@ -190,29 +185,31 @@
             // 
             this.writeToFile.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.writeToFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.writeToFile.Location = new System.Drawing.Point(15, 221);
+            this.writeToFile.Location = new System.Drawing.Point(15, 231);
             this.writeToFile.Name = "writeToFile";
             this.writeToFile.Size = new System.Drawing.Size(174, 31);
             this.writeToFile.TabIndex = 49;
             this.writeToFile.Text = "Write Results To File";
             this.writeToFile.UseVisualStyleBackColor = false;
+            this.writeToFile.Click += new System.EventHandler(this.writeToFile_Click);
             // 
             // closeButton
             // 
             this.closeButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.Location = new System.Drawing.Point(55, 258);
+            this.closeButton.Location = new System.Drawing.Point(55, 268);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(83, 31);
             this.closeButton.TabIndex = 50;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // FinalTotals
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(201, 297);
+            this.ClientSize = new System.Drawing.Size(201, 306);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.writeToFile);
             this.Controls.Add(this.mOwesV);
@@ -229,6 +226,8 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.finalTotalsTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FinalTotals";
             this.Text = "FinalTotals";
             this.ResumeLayout(false);
@@ -254,5 +253,17 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button writeToFile;
         private System.Windows.Forms.Button closeButton;
+
+        public System.EventHandler FinalTotals_Load { get; set; }
+
+        public System.EventHandler finalTotalsTitle_Click { get; set; }
+
+        public System.EventHandler label1_Click { get; set; }
+
+        public System.EventHandler label2_Click { get; set; }
+
+        public System.EventHandler label3_Click { get; set; }
+
+        public System.EventHandler label4_Click { get; set; }
     }
 }

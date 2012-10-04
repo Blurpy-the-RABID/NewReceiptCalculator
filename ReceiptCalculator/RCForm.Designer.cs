@@ -142,6 +142,7 @@
             this.calcFinalTotals.TabIndex = 14;
             this.calcFinalTotals.Text = "Calculate Final Totals";
             this.calcFinalTotals.UseVisualStyleBackColor = false;
+            this.calcFinalTotals.Click += new System.EventHandler(this.calcFinalTotals_Click);
             // 
             // label6
             // 
